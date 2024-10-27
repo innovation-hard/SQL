@@ -1,4 +1,6 @@
 data/
 django_aluar/
+django_test/
 .ipynb_checkpoints/
 database/
+_pycache_/
