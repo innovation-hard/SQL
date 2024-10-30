@@ -1,13 +1,14 @@
 # %%
 import requests
+import pprint
 # %%
 url = 'http://localhost:8000/'
 response = requests.get(url)
 # %%
-response.text
+print(response.text)
 # %%
-response.json()
-# %%
+pprint.pprint(response.json())
+# %% ---------------------------------------------------------------------
 item_id = 1
 response = requests.put(
     f'{url}items/{item_id}',
@@ -18,11 +19,11 @@ response = requests.put(
     }
 )
 # %%
-response.text
-# %%
+print(response.text)
+# %% ---------------------------------------------------------------------
 response = requests.get(
     f'{url}items/{1}',
 )
 # %%
-response.text
+print(response.text)
 # %%
